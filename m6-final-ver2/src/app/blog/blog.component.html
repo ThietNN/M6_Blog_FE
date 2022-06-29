@@ -1,0 +1,20 @@
+<h1>Blog List: </h1>
+<p>Showing {{blogCount}} blog(s)</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Author</th>
+  </tr>
+  <tr *ngFor="let b of blogList; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{b.title}}</td>
+    <td>{{b.user.name}}</td>
+    <td><a [routerLink]="['/detail', b.id]">Read more</a></td>
+  </tr>
+</table>
+<a [routerLink]="['/create']">Write a new blog</a>
+<br>
+<button (click)="removeAll()">Remove All Blog</button>
+
+

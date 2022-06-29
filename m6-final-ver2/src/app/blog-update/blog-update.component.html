@@ -1,0 +1,22 @@
+<h1>Update Blog: </h1>
+<a routerLink="">Back to homepage</a>
+<form [formGroup]="blogUpdateForm" (ngSubmit)="updateBlog(id)">
+  <div>
+    <input type="hidden" id="id" formControlName="id">
+  </div>
+  <div>
+    <label for="title">Blog's title: </label>
+    <input type="text" id="title" formControlName="title">
+  </div>
+  <div>
+    <input type="hidden" id="image" formControlName="image">
+  </div>
+  <div>
+    <input type="hidden" id="user" formControlName="user">
+  </div>
+  <div>
+    <label for="content">Content: </label>
+    <input type="text" id="content" formControlName="content">
+  </div>
+  <button type="submit">Update</button>
+</form>
